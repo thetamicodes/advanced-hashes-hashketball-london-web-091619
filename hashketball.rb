@@ -209,5 +209,19 @@ biggest_shoe = {:shoe => 0}
   return biggest_shoe[:rebounds]
 end
 
+def most_points_scored
+most_points = {:points => 0}
+ game_hash.each do |place, team|
+  team.each do |attributes, data|
+    if attributes == :players
+      data.each do |player|
+        most_points = player if player[:points] > most_points[:points]
+       # binding.pry
+      end
+    end  
+  end  
+ end
+  return most_points[:player_name]
+end
 
 

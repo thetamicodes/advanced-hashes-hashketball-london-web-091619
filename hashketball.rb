@@ -200,8 +200,7 @@ biggest_shoe = {:shoe => 0}
   team.each do |attributes, data|
     if attributes == :players
       data.each do |player|
-        player[:shoe] > biggest_shoe[:shoe]
-        biggest_shoe = player
+        biggest_shoe = player if player[:shoe] > biggest_shoe[:shoe]
         return player[:rebounds]
        # binding.pry
       end

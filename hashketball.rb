@@ -225,9 +225,9 @@ end
 def winning_team
   game_hash.each do |place, team|
     team.each do |attributes, data|
+        binding.pry
       if attributes == :players
         data.each do |player|
-        binding.pry
         end
       end    
     end  

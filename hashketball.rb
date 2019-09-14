@@ -195,13 +195,13 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
+ shoe_size = 0
+ 
  game_hash.each do |place, team|
   team.each do |attributes, data|
     if attributes == :players
       data.each do |player|
-        binding.pry
-        hash.select do |key,value| 
-          value == hash.values.max
+        
         end
       end
     end  

@@ -248,7 +248,7 @@ def player_with_longest_name
         details.each do |player_info|
           longest_name << player_info[:player_name]
           
-          # return longest_name.max_by(&length)
+          return longest_name.max_by {|names| names.length}
         end
       end
     end

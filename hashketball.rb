@@ -248,7 +248,7 @@ longest_name = []
   return longest_name.max_by {|names| names.length}
 end
 
-def long_name_steals_a_ton
+def long_name_steals_a_ton?
 most_steals = {:steals => 0}
   game_hash.each do |place_hash, team_hash|
     team_hash.each do |team_info, details|

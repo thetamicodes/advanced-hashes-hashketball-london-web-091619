@@ -236,12 +236,6 @@ end
 
 def player_with_longest_name
   longest_name = []
-  # game_hash.each do |place_hash, team_hash|
-  #   team_hash[:players].each do |player_info|
-  #   binding.pry
-    
-  #   end  
-  #end
   game_hash.each do |place_hash, team_hash|
     team_hash.each do |team_info, details|
       if team_info == :players

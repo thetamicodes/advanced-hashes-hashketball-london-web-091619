@@ -199,7 +199,7 @@ def big_shoe_rebounds
   team.each do |attributes, data|
     if attributes == :players
       data.each do |player|
-        biggest_shoe = player 
+        biggest_shoe = player[:shoe] 
         binding.pry
       end
     end  

@@ -200,7 +200,7 @@ def big_shoe_rebounds
     if attributes == :players
       data.each do |player|
         player[:shoe] > biggest_shoe[:shoe]
-        
+        then biggest_shoe = player
         binding.pry
       end
     end  

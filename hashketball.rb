@@ -235,5 +235,6 @@ winner = {}
 end
 
 def player_with_longest_name
-
+  game_hash.each do |place_hash, team_hash|
+    
 end

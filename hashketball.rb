@@ -223,18 +223,15 @@ most_points = {:points => 0}
 end
 
 def winning_team
-
-  game_hash.each do |place, team|
-    team.each do |attributes, data|
-      if attributes == :players
-        data.each do |player|
-        binding.pry
-          amount = arr.inject(0) {|sum, hash| sum + hash[:amount]}
-          end
-        end
-      end    
-    end  
-  end        
+ winner = {}
+ game_hash.each do |team, team_details_hash|
+   team_points = 0
+   team_details_hash[:players].each do |player|
+     team_points += player[:points]
+   end
+   winner[team_details_hash[:team_name]] = team_points
+ end
+ winner.key(winner.values.max)
 end
 
 def player_with_longest_name

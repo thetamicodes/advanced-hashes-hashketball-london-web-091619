@@ -162,12 +162,12 @@ end
 
 def player_numbers(team_name)
   numbers = []
-  game_hash.map do |place, team|
-    if team[:team_name] == team_name
-      team.each do |attributes, data|
-        if attributes == :players
-          data.each do |player|
-            numbers << player[:number]
+  game_hash.map do |place_hash, team_hash|
+    if team_hash[:team_name] == team_name
+      team_hash.each do |team_info, details|
+        if team_info == :players
+          details.each do |player_info|
+            numbers << player_info[:number]
           end  
         end
       end
@@ -178,12 +178,12 @@ end
 
 def player_stats(player_name)
   stats = {}
-  game_hash.each do |place, team|
-    team.each do |attributes, data|
-      if attributes == :players 
-        data.each do |player|
-          if player[:player_name] == player_name
-            stats = player.delete_if do |key, value|
+  game_hash.each do |place_hash, team_hash|
+    team_hash.each do |team_info, details|
+      if team_info == :players 
+        details.each do |player_info|
+          if player_info[:player_name] == player_name
+            stats = player_info.delete_if do |key, value|
               key == :player_name
             end
           end
@@ -196,11 +196,11 @@ end
 
 def big_shoe_rebounds
 biggest_shoe = {:shoe => 0}
- game_hash.each do |place, team|
-  team.each do |attributes, data|
-    if attributes == :players
-      data.each do |player|
-        biggest_shoe = player if player[:shoe] > biggest_shoe[:shoe]
+ game_hash.each do |place_hash, team_hash|
+  team_hash.each do |team_info, details|
+    if team_info == :players
+      details.each do |player_info|
+        biggest_shoe = player_info if player_info[:shoe] > biggest_shoe[:shoe]
       end
     end  
   end  
@@ -210,11 +210,11 @@ end
 
 def most_points_scored
 most_points = {:points => 0}
- game_hash.each do |place, team|
-  team.each do |attributes, data|
-    if attributes == :players
-      data.each do |player|
-        most_points = player if player[:points] > most_points[:points]
+ game_hash.each do |place_hash, team_hash|
+  team_hash.each do |team_info, details|
+    if team_info == :players
+      details.each do |player_info|
+        most_points = player_info if player_info[:points] > most_points[:points]
       end
     end  
   end  
@@ -223,11 +223,11 @@ most_points = {:points => 0}
 end
 
 def winning_team
- winner = {}
- game_hash.each do |team, team_details_hash|
+winner = {}
+ game_hash.each do |place_hash, team_hash|
    team_points = 0
-   team_details_hash[:players].each do |player|
-     team_points += player[:points]
+   team_hash[:players].each do |player_info|
+     team_points += player_info[:points]
    end
    winner[team_details_hash[:team_name]] = team_points
  end

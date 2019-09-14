@@ -228,7 +228,7 @@ def winning_team
       if attributes == :players
         data.each do |player|
         binding.pry
-        player[:points].sum
+          
         end
       end    
     end  

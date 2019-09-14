@@ -253,10 +253,10 @@ def long_name_steals_a_ton
   game_hash.each do |place_hash, team_hash|
     team_hash.each do |team_info, details|
       if team_info == :players
-        details.each do |player_info|
-          most_steals << player_info[:steals]
-          # most_steals.sort 
-          # most_steals[-1]
+        # details.each do |player_info|
+        #   most_steals << player_info[:steals]
+        #   # most_steals.sort 
+        #   # most_steals[-1]
         end
       end
     end      

@@ -224,9 +224,9 @@ end
 
 def winning_team
 winner = {}
- game_hash.each do |place_hash, team_hash|
+ game_hash.each do |team, team_details_hash|
    team_points = 0
-   team_hash[:players].each do |player_info|
+   team_details_hash[:players].each do |player_info|
      team_points += player_info[:points]
    end
    winner[team_details_hash[:team_name]] = team_points

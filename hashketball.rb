@@ -206,7 +206,6 @@ def big_shoe_rebounds
           sorted_shoes = value.sort 
           memo = sorted_shoes[0] if sorted_shoes[0] <= memo
           memo
-    binding.pry
         end
         p sorted_rebound
       end

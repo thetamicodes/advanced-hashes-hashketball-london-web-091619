@@ -195,7 +195,6 @@ def player_stats(player_name)
 end
 
 def big_shoe_rebounds
-game[:home][:players][:shoe] = 0
 
  game_hash.each do |place, team|
   team.each do |attributes, data|

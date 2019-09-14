@@ -241,6 +241,7 @@ def player_with_longest_name
         details.each do |player_info|
           
     binding.pry
+        end
       end
     end
   end

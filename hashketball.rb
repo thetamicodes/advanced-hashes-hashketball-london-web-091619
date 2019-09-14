@@ -235,7 +235,7 @@ winner = {}
 end
 
 def player_with_longest_name
-  longest_name = []
+longest_name = []
   game_hash.each do |place_hash, team_hash|
     team_hash.each do |team_info, details|
       if team_info == :players
@@ -249,17 +249,14 @@ def player_with_longest_name
 end
 
 def long_name_steals_a_ton
-  most_steals = []
+most_steals = []
   game_hash.each do |place_hash, team_hash|
     team_hash.each do |team_info, details|
       if team_info == :players
-        # details.each do |player_info|
-        #   most_steals << player_info[:steals]
-        #   # most_steals.sort 
-        #   # most_steals[-1]
+      details.each do |player_info|
+        most_steals << player_info[:steals]
         binding.pry
-        # end
       end
-    end      
+    end
   end
 end

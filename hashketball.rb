@@ -247,11 +247,10 @@ def player_with_longest_name
       if team_info == :players
         details.each do |player_info|
           longest_name << player_info[:player_name]
-          
-          return longest_name.max_by {|names| names.length}
         end
       end
     end
   end
+  return longest_name.max_by {|names| names.length}
       binding.pry
 end

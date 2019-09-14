@@ -259,4 +259,9 @@ most_steals = {:steals => 0}
       end
     end
   end
+    if most_steals[:player_name] == player_with longest names
+      return true
+    else
+      return false
+    end  
 end

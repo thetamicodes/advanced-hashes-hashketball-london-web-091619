@@ -206,7 +206,7 @@ biggest_shoe = {:shoe => 0}
     end  
   end  
  end
-  return player[:rebounds]
+  return biggest_shoe[:rebounds]
 end
 
 

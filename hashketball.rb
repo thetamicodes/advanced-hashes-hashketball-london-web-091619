@@ -255,8 +255,8 @@ def long_name_steals_a_ton
       if team_info == :players
         details.each do |player_info|
           most_steals << player_info[:steals]
-          most_steals.sort 
-          most_steals[-1]
+          # most_steals.sort 
+          # most_steals[-1]
           binding.pry
         end
       end

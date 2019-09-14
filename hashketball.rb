@@ -254,7 +254,7 @@ most_steals = {:steals => 0}
     team_hash.each do |team_info, details|
       if team_info == :players
       details.each do |player_info|
-        most_steals = player_info if player_info[:steals] > most_points[:points]
+        most_steals = player_info if player_info[:steals] > most_steals[:steals]
    
         binding.pry
       end

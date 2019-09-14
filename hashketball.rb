@@ -228,7 +228,8 @@ def winning_team
       if attributes == :players
         data.each do |player|
         binding.pry
-          
+          amount = arr.inject(0) {|sum, hash| sum + hash[:amount]}
+          end
         end
       end    
     end  

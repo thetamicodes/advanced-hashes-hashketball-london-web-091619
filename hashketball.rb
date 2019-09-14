@@ -201,13 +201,7 @@ def big_shoe_rebounds
   team.each do |attributes, data|
     if attributes == :players
       data.each do |player|
-        sorted_rebound = player.reduce(nil) do |memo, (key, value)|
-          memo = value[0] if !memo
-          sorted_shoes = value.sort 
-          memo = sorted_shoes[0] if sorted_shoes[0] <= memo
-          memo
-        end
-        p sorted_rebound
+        binding.pry
       end
     end  
   end  

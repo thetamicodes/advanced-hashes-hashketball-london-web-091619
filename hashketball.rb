@@ -201,7 +201,6 @@ biggest_shoe = {:shoe => 0}
     if attributes == :players
       data.each do |player|
         biggest_shoe = player if player[:shoe] > biggest_shoe[:shoe]
-       # binding.pry
       end
     end  
   end  
@@ -216,7 +215,6 @@ most_points = {:points => 0}
     if attributes == :players
       data.each do |player|
         most_points = player if player[:points] > most_points[:points]
-       # binding.pry
       end
     end  
   end  

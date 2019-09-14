@@ -223,7 +223,15 @@ most_points = {:points => 0}
 end
 
 def winning_team
-
+  game_hash.each do |place, team|
+    team.each do |attributes, data|
+      if attributes == :players
+        data.each do |player|
+        
+        end
+      end    
+    end  
+  end        
 end
 
 def player_with_longest_name
